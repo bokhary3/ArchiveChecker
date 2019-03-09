@@ -12,6 +12,8 @@
 		DA0501A42232FEF100C1E063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0501A22232FEF100C1E063 /* Main.storyboard */; };
 		DA0501A62232FEF400C1E063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0501A52232FEF400C1E063 /* Assets.xcassets */; };
 		DA0501A92232FEF400C1E063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0501A72232FEF400C1E063 /* LaunchScreen.storyboard */; };
+		DA0501B12232FF1600C1E063 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0501B02232FF1600C1E063 /* Configurations.swift */; };
+		DA0501B3223302D800C1E063 /* isDemoServer.py in Resources */ = {isa = PBXBuildFile; fileRef = DA0501B2223302D800C1E063 /* isDemoServer.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		DA0501A52232FEF400C1E063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0501A82232FEF400C1E063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0501AA2232FEF400C1E063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0501B02232FF1600C1E063 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		DA0501B2223302D800C1E063 /* isDemoServer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = isDemoServer.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +64,30 @@
 				DA0501A52232FEF400C1E063 /* Assets.xcassets */,
 				DA0501A72232FEF400C1E063 /* LaunchScreen.storyboard */,
 				DA0501AA2232FEF400C1E063 /* Info.plist */,
+				DA0501B02232FF1600C1E063 /* Configurations.swift */,
+				DA0501B2223302D800C1E063 /* isDemoServer.py */,
 			);
 			path = ArchiveChecker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		DA0501B4223308D400C1E063 /* Checker */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = isDemoServer.py;
+			buildConfigurationList = DA0501B5223308D400C1E063 /* Build configuration list for PBXLegacyTarget "Checker" */;
+			buildPhases = (
+			);
+			buildToolPath = /Library/Frameworks/Python.framework/Versions/3.7/bin/python3;
+			buildWorkingDirectory = "/Users/elsayedhussein/Documents/iOS Development/Projects/ArchiveChecker/ArchiveChecker";
+			dependencies = (
+			);
+			name = Checker;
+			passBuildSettingsInEnvironment = 1;
+			productName = Checker;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		DA05019A2232FEF100C1E063 /* ArchiveChecker */ = {
@@ -97,6 +120,9 @@
 					DA05019A2232FEF100C1E063 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					DA0501B4223308D400C1E063 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = DA0501962232FEF100C1E063 /* Build configuration list for PBXProject "ArchiveChecker" */;
@@ -113,6 +139,7 @@
 			projectRoot = "";
 			targets = (
 				DA05019A2232FEF100C1E063 /* ArchiveChecker */,
+				DA0501B4223308D400C1E063 /* Checker */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +152,7 @@
 				DA0501A92232FEF400C1E063 /* LaunchScreen.storyboard in Resources */,
 				DA0501A62232FEF400C1E063 /* Assets.xcassets in Resources */,
 				DA0501A42232FEF100C1E063 /* Main.storyboard in Resources */,
+				DA0501B3223302D800C1E063 /* isDemoServer.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +165,7 @@
 			files = (
 				DA0501A12232FEF100C1E063 /* ViewController.swift in Sources */,
 				DA05019F2232FEF100C1E063 /* AppDelegate.swift in Sources */,
+				DA0501B12232FF1600C1E063 /* Configurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +343,33 @@
 			};
 			name = Release;
 		};
+		DA0501B6223308D400C1E063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = E9WC5VCAQB;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA0501B7223308D400C1E063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E9WC5VCAQB;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +387,15 @@
 			buildConfigurations = (
 				DA0501AE2232FEF400C1E063 /* Debug */,
 				DA0501AF2232FEF400C1E063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA0501B5223308D400C1E063 /* Build configuration list for PBXLegacyTarget "Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0501B6223308D400C1E063 /* Debug */,
+				DA0501B7223308D400C1E063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
