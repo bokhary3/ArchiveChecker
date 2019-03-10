@@ -1,9 +1,10 @@
-with open('/Users/elsayedhussein/Documents/iOS Development/Projects/ArchiveChecker/ArchiveChecker/Configurations.swift','r') as f:
-    i = 0
-    for line in f:
-        i += 1
-        if 'var' in line:
-            words =  line.rstrip('\n').split(" ")
-            if words[1] == 'isDemoServer' and words[3] == 'true':
-                print(f.name + ':' + str(i) + ': error: Can\'t archive, your are on demo server!!!!! 😱')
-                exit(1)
+import os.path
+import sys
+
+with open(os.path.join(sys.path[0], 'Configurations.swift'),'r') as f:
+   for idx, line in enumerate(f):
+       if 'var' in line:
+           words =  line.rstrip('\n').split(" ")
+           if words[1] == 'isDemoServer' and words[3] == 'true':
+               print(f.name + ':' + str(idx + 1) + ': error: Can\'t archive, your are on demo server!!!!! 😱')
+               exit(1)
